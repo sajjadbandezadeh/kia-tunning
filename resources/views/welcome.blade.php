@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
-    <title>Timed Cards Opening</title>
+    <title>Kia Tunning</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
@@ -27,43 +27,12 @@
                 />
             </svg>
         </div>
-        <div>Globe Express</div>
+        <div>Mohammad Kia</div>
     </div>
     <div>
         <div class="active">Home</div>
-        <div>Holidays</div>
-        <div>Destinations</div>
-        <div>Flights</div>
-        <div>Offers</div>
+        <div>About</div>
         <div>Contact</div>
-        <div class="svg-container">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-            </svg>
-        </div>
-        <div class="svg-container">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                    clip-rule="evenodd"
-                />
-            </svg>
-        </div>
     </div>
 </nav>
 
@@ -73,58 +42,53 @@
     <div class="place-box">
         <div class="text">Saipa Corp</div>
     </div>
-    <div class="title-box-1"><div class="title-1">Pride</div></div>
-    <div class="title-box-2"><div class="title-2">Hatchback</div></div>
-    <div class="desc">
-        The Pride 132, also known as the Saba, is a compact hatchback produced in Iran, primarily by the Iran Khodro Company. It’s an evolution of the original Pride model, known for its straightforward and practical design.
+    <div class="title-box-1">
+        <div class="title-1">Pride</div>
     </div>
-    <a class="cta" href="">
+    <div class="title-box-2">
+        <div class="title-2">Hatchback</div>
+    </div>
+    <div class="desc">
+        The Pride 132, also known as the Saba, is a compact hatchback produced in Iran, primarily by the Iran Khodro
+        Company. It’s an evolution of the original Pride model, known for its straightforward and practical design.
+    </div>
+    <a class="cta" onclick="show('popup2')" data-toggle="modal" data-target=".bd-example-modal-lg">
         <button class="discover">Let's Tune</button>
     </a>
 </div>
 
 <div class="details" id="details-odd">
     <div class="place-box">
-        <div class="text">Switzerland Alps</div>
+        <div class="text"></div>
     </div>
-    <div class="title-box-1"><div class="title-1">SAINT </div></div>
-    <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+    <div class="title-box-1">
+        <div class="title-1"></div>
+    </div>
+    <div class="title-box-2">
+        <div class="title-2"></div>
+    </div>
     <div class="desc">
-        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
     </div>
-    <div class="cta">
-        <button class="bookmark">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
-                    clip-rule="evenodd"
-                />
-            </svg>
-        </button>
-        <button class="discover">Discover Location</button>
-    </div>
+    <a class="cta" onclick="show('popup2')" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <button class="discover">Let's Tune</button>
+    </a>
 </div>
 
 <div class="pagination" id="pagination">
-{{--    <div class="arrow arrow-left">--}}
-{{--        <svg--}}
-{{--            xmlns="http://www.w3.org/2000/svg"--}}
-{{--            fill="none"--}}
-{{--            viewBox="0 0 24 24"--}}
-{{--            stroke="currentColor"--}}
-{{--        >--}}
-{{--            <path--}}
-{{--                stroke-linecap="round"--}}
-{{--                stroke-linejoin="round"--}}
-{{--                d="M15.75 19.5L8.25 12l7.5-7.5"--}}
-{{--            />--}}
-{{--        </svg>--}}
-{{--    </div>--}}
+    {{--    <div class="arrow arrow-left">--}}
+    {{--        <svg--}}
+    {{--            xmlns="http://www.w3.org/2000/svg"--}}
+    {{--            fill="none"--}}
+    {{--            viewBox="0 0 24 24"--}}
+    {{--            stroke="currentColor"--}}
+    {{--        >--}}
+    {{--            <path--}}
+    {{--                stroke-linecap="round"--}}
+    {{--                stroke-linejoin="round"--}}
+    {{--                d="M15.75 19.5L8.25 12l7.5-7.5"--}}
+    {{--            />--}}
+    {{--        </svg>--}}
+    {{--    </div>--}}
     <div class="arrow arrow-right" style="cursor: pointer" onclick="step()">
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -139,21 +103,159 @@
             />
         </svg>
     </div>
-    <div class="progress-sub-container" >
-        <div class="progress-sub-background" >
-            <div class="progress-sub-foreground" ></div>
+    <div class="progress-sub-container">
+        <div class="progress-sub-background">
+            <div class="progress-sub-foreground"></div>
         </div>
     </div>
     <div class="slide-numbers" id="slide-numbers"></div>
 </div>
 
-<div class="cover" ></div>
+<div class="cover"></div>
 
-
+<div class="popup" id="popup2">
+    <div onclick="hide('popup2')"
+         style="position: absolute; right: 10px; top: 10px; z-index: 150; border-radius: 100px; background-color: rgba(108,108,108,0.45); padding-top: 8px;padding-bottom: 8px;padding-right: 11px;padding-left: 11px; cursor: pointer">
+        <div style="color: white">X</div>
+    </div>
+    <div style="z-index: 152;width: 98.5%; margin-top: 50px;color: #1a1a1a;position: relative">
+        <table style="width: 100%;z-index: 153;color: black">
+            <tr>
+                <td style="width: 50%;text-align: center;">
+                            <img width="35%"
+                                 src="https://dieselcomponentsinc.com/wp-content/uploads/2023/06/Can-Turbo-Failure-Cause-Engine-Damage.webp">
+                            <br>
+                            <span style="text-align: center">
+                        توربو شارژ
+                    </span>
+                </td>
+                <td style="text-align: center; width: 50%">
+                            <img width="40%"
+                                 src="https://king-sport.ir/wp-content/uploads/2022/10/%D8%B1%D9%85-%D8%A7%DB%8C%D8%B1-206-%D9%88-207-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%D9%85%D9%88%D8%AA%D9%88%D8%B1-tu5.jpg">
+                            <br>
+                            <span style="text-align: center">
+                        تنفس طبیعی (اتمسفر)
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td style="direction: rtl; text-align: right">
+                    <label><input type="radio" id="radio1" onchange="toggleCheckboxes()" name="group">توربو</label>
+                </td>
+                <td style="direction: rtl; text-align: right">
+                    <label><input type="radio" id="radio2" onchange="toggleCheckboxes()" name="group">اتمسفر (تنفس طبیعی)</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox1"/>
+                        <label style="padding-left: 20px">
+                        وست گیت
+                    </label>
+                        <font color="green">12+</font>
+                    </div>
+                </td>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox2"/>
+                        <label style="padding-left: 20px">
+                        هدرز 4-2-1
+                    </label>
+                        <font color="green">12+</font>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox1"/>
+                        <label style="padding-left: 20px">
+                        اینترکولر
+                    </label>
+                        <font color="green">8+</font>
+                    </div>
+                </td>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox2"/>
+                        <label style="padding-left: 20px">
+                        رم ایر
+                    </label>
+                        <font color="green">5+</font>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox1"/>
+                        <label style="padding-left: 20px">
+                        منبع اگزوز
+                    </label>
+                        <font color="green">5+</font>
+                    </div>
+                </td>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox2"/>
+                        <label style="padding-left: 20px">
+                        منبع اگزوز
+                    </label>
+                        <font color="green">3+</font>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox1"/>
+                        <label style="padding-left: 20px">
+                            دوئل توربو
+                    </label>
+                        <font color="green">180+</font>
+                    </div>
+                </td>
+                <td style="text-align: right">
+                    <div style="direction: rtl; text-align: right">
+                        <input type="checkbox" class="checkbox2"/>
+                        <label style="padding-left: 20px">
+                        تراتل
+                    </label>
+                        <font color="green">18+</font>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="vehicle" style="">
+        <img width="100%" id="cardetail_pic"/>
+    </div>
+</div>
 
 </body>
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
-<script  src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+<script>
+    const checkboxes1 = document.querySelectorAll('.checkbox1');
+    const checkboxes2 = document.querySelectorAll('.checkbox2');
+    checkboxes1.forEach(checkbox => checkbox.disabled = true);
+    checkboxes2.forEach(checkbox => checkbox.disabled = true);
+
+    function toggleCheckboxes() {
+        const radio1 = document.getElementById('radio1');
+
+        if (radio1.checked) {
+            checkboxes1.forEach(checkbox => checkbox.disabled = false);
+            checkboxes2.forEach(checkbox => checkbox.disabled = true);
+            checkboxes2.forEach(checkbox => checkbox.checked = false);
+        } else {
+            checkboxes1.forEach(checkbox => checkbox.disabled = true);
+            checkboxes2.forEach(checkbox => checkbox.disabled = false);
+            checkboxes1.forEach(checkbox => checkbox.checked = false);
+        }
+    }
+</script>
 </body>
 </html>

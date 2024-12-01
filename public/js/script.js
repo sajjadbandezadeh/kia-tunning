@@ -4,7 +4,8 @@ const data = [
         place:'Saipa Corp',
         title:'Pride',
         title2:'Hatchback',
-        description:'The Pride 132, also known as the Saba, is a compact hatchback produced in Iran, primarily by the Iran Khodro Company. It’s an evolution of the original Pride model, known for its straightforward and practical design.\n',       image:'https://cdn.asriran.com/files/fa/news/1403/7/17/1970202_674.jpg'
+        description:'The Pride 132, also known as the Saba, is a compact hatchback produced in Iran, primarily by the Iran Khodro Company. It’s an evolution of the original Pride model, known for its straightforward and practical design.\n',
+        image:'https://cdn.asriran.com/files/fa/news/1403/7/17/1970202_674.jpg'
     },
     {
         id: 2,
@@ -210,7 +211,11 @@ function step() {
       data[order[0]].title2;
     document.querySelector(`${detailsActive} .desc`).textContent =
       data[order[0]].description;
-    document.querySelector(`${detailsActive} .cta`).href = "cars/" + data[order[0]].id;
+    // if (document.querySelector(`${detailsActive} .cta`)) {
+    //     document.querySelector(`${detailsActive} .cta`).href = "cars/" + data[order[0]].id;
+    // } else {
+    //     document.querySelector(`${detailsActive} .ctao`).href = "cars/" + data[order[0]].id;
+    // }
     gsap.set(detailsActive, { zIndex: 22 });
     gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
     gsap.to(`${detailsActive} .text`, {
@@ -365,3 +370,16 @@ async function start() {
 }
 
 start()
+
+
+$ = function (id) {
+    return document.getElementById(id);
+};
+
+function show(id) {
+    $(id).style.display = "block";
+    document.getElementById("cardetail_pic").src = document.getElementById("")
+}
+function hide(id) {
+    $(id).style.display = "none";
+}

@@ -97,6 +97,8 @@ body {
   width: 500px;
 }
 .details > .cta {
+  text-decoration: none;
+  cursor: pointer;
   width: 500px;
   margin-top: 24px;
   display: flex;
@@ -126,6 +128,7 @@ body {
   font-size: 12px;
   margin-left: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 nav {
@@ -253,4 +256,52 @@ nav > div:last-child > .active:after {
   height: 100vh;
   background-color: #fff;
   z-index: 100;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 60%;
+    left: 5%;
+    top: 5%;
+    background: rgba(255, 255, 255, 0.73);
+    z-index: 101;
+}
+
+#popup2:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 101;
+}
+
+#popup2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 102;
+}
+.popup a,
+.popup a:visited {
+    color: #1abc9c;
+}
+
+.vehicle {
+    width: 30%;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    z-index: 151;
+    margin-left: 62.5%;
+    top: 20%;
+    margin-top: -100px;
 }
