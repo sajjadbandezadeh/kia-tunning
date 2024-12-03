@@ -211,6 +211,12 @@ function step() {
       data[order[0]].title2;
     document.querySelector(`${detailsActive} .desc`).textContent =
       data[order[0]].description;
+    document.querySelector(`${detailsActive} .iddata`).textContent =
+      data[order[0]].id;
+    document.querySelector(`${detailsActive} .img-bg`).textContent =
+      data[order[0]].image;
+    document.getElementById("img-bg").value = data[order[0]].image;
+    document.getElementById("iddata").value = data[order[0]].id;
     // if (document.querySelector(`${detailsActive} .cta`)) {
     //     document.querySelector(`${detailsActive} .cta`).href = "cars/" + data[order[0]].id;
     // } else {
@@ -378,7 +384,9 @@ $ = function (id) {
 
 function show(id) {
     $(id).style.display = "block";
-    document.getElementById("cardetail_pic").src = document.getElementById("")
+    console.log(document.getElementById("img-bg").value);
+    console.log(document.getElementById("iddata").value);
+    document.getElementById("cardetail_pic").src = document.getElementById("img-bg").value;
 }
 function hide(id) {
     $(id).style.display = "none";

@@ -39,6 +39,9 @@
 <div id="demo"></div>
 
 <div class="details" id="details-even">
+    <input type="hidden" class="img-bg" id="img-bg"
+           value="https://cdn.asriran.com/files/fa/news/1403/7/17/1970202_674.jpg"/>
+    <input type="hidden" class="iddata" id="iddata" value="1"/>
     <div class="place-box">
         <div class="text">Saipa Corp</div>
     </div>
@@ -58,6 +61,8 @@
 </div>
 
 <div class="details" id="details-odd">
+    <input type="hidden" class="img-bg" id="img-bg" value=""/>
+    <input type="hidden" class="iddata" id="iddata" value=""/>
     <div class="place-box">
         <div class="text"></div>
     </div>
@@ -115,35 +120,37 @@
 
 <div class="popup" id="popup2">
     <div onclick="hide('popup2')"
-         style="position: absolute; right: 10px; top: 10px; z-index: 150; border-radius: 100px; background-color: rgba(108,108,108,0.45); padding-top: 8px;padding-bottom: 8px;padding-right: 11px;padding-left: 11px; cursor: pointer">
+         style="position: absolute; right: 10px; top: 10px; z-index: 150; border-radius: 100px; background-color: rgba(108,108,108,0.45); padding-top: 8px; padding-bottom: 5px; padding-right: 15px; padding-left: 15px; cursor: pointer">
         <div style="color: white">X</div>
     </div>
-    <div style="z-index: 152;width: 98.5%; margin-top: 50px;color: #1a1a1a;position: relative">
-        <table style="width: 100%;z-index: 153;color: black">
+    <div style="z-index: 152;width: 95%; margin-top: 50px;color: #1a1a1a;position: relative">
+        <table style="width: 100%;z-index: 153; padding: 25px;color: black">
             <tr>
-                <td style="width: 50%;text-align: center;">
-                            <img width="35%"
-                                 src="https://dieselcomponentsinc.com/wp-content/uploads/2023/06/Can-Turbo-Failure-Cause-Engine-Damage.webp">
-                            <br>
-                            <span style="text-align: center">
-                        توربو شارژ
+                <td style="width: 50%;text-align: right;">
+                    <img width="35%"
+                         src="https://dieselcomponentsinc.com/wp-content/uploads/2023/06/Can-Turbo-Failure-Cause-Engine-Damage.webp">
+                    <br>
                     </span>
                 </td>
-                <td style="text-align: center; width: 50%">
-                            <img width="40%"
-                                 src="https://king-sport.ir/wp-content/uploads/2022/10/%D8%B1%D9%85-%D8%A7%DB%8C%D8%B1-206-%D9%88-207-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%D9%85%D9%88%D8%AA%D9%88%D8%B1-tu5.jpg">
-                            <br>
-                            <span style="text-align: center">
-                        تنفس طبیعی (اتمسفر)
+                <td style="text-align: right; width: 50%">
+                    <img width="40%"
+                         src="https://king-sport.ir/wp-content/uploads/2022/10/%D8%B1%D9%85-%D8%A7%DB%8C%D8%B1-206-%D9%88-207-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%D9%85%D9%88%D8%AA%D9%88%D8%B1-tu5.jpg">
+                    <br>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td style="direction: rtl; text-align: right">
-                    <label><input type="radio" id="radio1" onchange="toggleCheckboxes()" name="group">توربو</label>
+                    <label class="container">توربو
+                        <input type="radio" id="radio1" onchange="toggleCheckboxes()" name="group">
+                        <span class="checkmark"></span>
+                    </label>
                 </td>
                 <td style="direction: rtl; text-align: right">
-                    <label><input type="radio" id="radio2" onchange="toggleCheckboxes()" name="group">اتمسفر (تنفس طبیعی)</label>
+                    <label class="container">اتمسفر (تنفس طبیعی)
+                        <input type="radio" id="radio2" onchange="toggleCheckboxes()" name="group">
+                        <span class="checkmark"></span>
+                    </label>
                 </td>
             </tr>
             <tr>
@@ -151,8 +158,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox1"/>
                         <label style="padding-left: 20px">
-                        وست گیت
-                    </label>
+                            وست گیت
+                        </label>
                         <font color="green">12+</font>
                     </div>
                 </td>
@@ -160,8 +167,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox2"/>
                         <label style="padding-left: 20px">
-                        هدرز 4-2-1
-                    </label>
+                            هدرز 4-2-1
+                        </label>
                         <font color="green">12+</font>
                     </div>
                 </td>
@@ -171,8 +178,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox1"/>
                         <label style="padding-left: 20px">
-                        اینترکولر
-                    </label>
+                            اینترکولر
+                        </label>
                         <font color="green">8+</font>
                     </div>
                 </td>
@@ -180,8 +187,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox2"/>
                         <label style="padding-left: 20px">
-                        رم ایر
-                    </label>
+                            رم ایر
+                        </label>
                         <font color="green">5+</font>
                     </div>
                 </td>
@@ -191,8 +198,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox1"/>
                         <label style="padding-left: 20px">
-                        منبع اگزوز
-                    </label>
+                            منبع اگزوز
+                        </label>
                         <font color="green">5+</font>
                     </div>
                 </td>
@@ -200,8 +207,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox2"/>
                         <label style="padding-left: 20px">
-                        منبع اگزوز
-                    </label>
+                            منبع اگزوز
+                        </label>
                         <font color="green">3+</font>
                     </div>
                 </td>
@@ -212,7 +219,7 @@
                         <input type="checkbox" class="checkbox1"/>
                         <label style="padding-left: 20px">
                             دوئل توربو
-                    </label>
+                        </label>
                         <font color="green">180+</font>
                     </div>
                 </td>
@@ -220,8 +227,8 @@
                     <div style="direction: rtl; text-align: right">
                         <input type="checkbox" class="checkbox2"/>
                         <label style="padding-left: 20px">
-                        تراتل
-                    </label>
+                            تراتل
+                        </label>
                         <font color="green">18+</font>
                     </div>
                 </td>
@@ -229,7 +236,78 @@
         </table>
     </div>
     <div class="vehicle" style="">
-        <img width="100%" id="cardetail_pic"/>
+        <img width="96%" style="border-radius: 18px; margin: auto; padding: 10px; position: relative; display: block;" id="cardetail_pic"/>
+        <table style="width: 100%; color: black; z-index: 156; padding: 20px; direction: rtl">
+            <tr style="text-align: right">
+                <td>
+                    نام خودرو :
+                </td>
+                <td>پراید</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    رنگ خودرو :
+                </td>
+                <td>مشکی ماشین</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    موتور :
+                </td>
+                <td>4 سیلندر توربوشارژ مولتی‌ایر</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    حجم موتور :
+                </td>
+                <td>1.4 لیتر</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    گیربکس :
+                </td>
+                <td>6 سرعته اتومات</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    قدرت اسب بخار :
+                </td>
+                <td>90hp</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    گشتاور :
+                </td>
+                <td>90 نیوتن متر</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    شتاب :
+                </td>
+                <td>3 ثانیه</td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                     سرعت
+                </td>
+                <td>320 کیلومتر برساعت</td>
+            </tr>
+        </table>
+    </div>
+    <div class="submitOrder" style="">
+        <table style="width: 100%; color: black; z-index: 156; padding: 20px; direction: rtl">
+            <tr style="text-align: right">
+                <td style="width:30%">
+                    جهت ثبت سفارش شماره تماس خود را وارد کنید
+                </td>
+                <td style="width:20%;padding-left: 40px">
+                    <input style="width: 100%" type="text" minlength="10" maxlength="11" placeholder="شماره موبایل"/>
+                </td>
+                <td style="width:15%">
+                    <button class="button button1" style="width: 100%">ثبت سفارش</button>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 

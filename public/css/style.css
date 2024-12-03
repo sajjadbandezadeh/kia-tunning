@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
+@font-face {
+    font-family: abar;
+    src: url('../fonts/abar/AbarMid-Regular.ttf');
+}
+* {
+    font-family: abar;
+}
 body {
   margin: 0;
   background-color: #1a1a1a;
@@ -259,13 +266,15 @@ nav > div:last-child > .active:after {
 }
 
 .popup {
+    transition: 2s;
     display: none;
     position: fixed;
     padding: 10px;
-    width: 60%;
-    left: 5%;
-    top: 5%;
-    background: rgba(255, 255, 255, 0.73);
+    width: 50%;
+    left: 11%;
+    top: 14%;
+    border-radius: 18px;
+    background: rgb(255, 255, 255);
     z-index: 101;
 }
 
@@ -276,7 +285,7 @@ nav > div:last-child > .active:after {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 101;
 }
 
@@ -287,7 +296,8 @@ nav > div:last-child > .active:after {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #FFF;
+    border-radius: 18px;
+    background: rgb(255, 255, 255);
     z-index: 102;
 }
 .popup a,
@@ -296,12 +306,122 @@ nav > div:last-child > .active:after {
 }
 
 .vehicle {
-    width: 30%;
-    height: 50px;
-    background-color: red;
+    width: 20%;
+    background-color: white;
+    border-radius: 18px;
     position: fixed;
     z-index: 151;
     margin-left: 62.5%;
-    top: 20%;
+    top: 25%;
+    left: 0;
     margin-top: -100px;
+}
+.submitOrder {
+    width: 51%;
+    background-color: white;
+    border-radius: 18px;
+    position: fixed;
+    z-index: 151;
+    margin-left: -10px;
+    margin-top: 20px;
+}
+input[type=text]
+{
+    color: #232323ad;
+    height: 22px;
+    padding-top: 7px;
+    direction: rtl;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    background-image: url(https://i.sstatic.net/pbpVI.png);
+    /* background-repeat: repeat-x; */
+    border-radius: 10px;
+    border: 1px rgb(107 107 107 / 72%) solid;
+}
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: #04AA6D;
+    border: 1px solid #04AA6D;
+    border-radius: 10px;
+}
+
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.container {
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }
