@@ -381,13 +381,51 @@ start()
 $ = function (id) {
     return document.getElementById(id);
 };
-
+var carHp, carTorque, carAccelerate, carTopSpeed;
 function show(id) {
     $(id).style.display = "block";
+    resetCheckboxes();
+    document.getElementById("cardetail_pic").src = document.getElementById("img-bg").value;
+    const carId = document.getElementById("iddata").value;
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("loading").style.display = "none";
+        if (this.status == 200) {
+            const carData = JSON.parse(this.responseText);
+            carHp = carData.hp;
+            carTorque = carData.torque;
+            carAccelerate = carData.accelerate;
+            carTopSpeed = carData.top_speed;
+            document.getElementById("car-name").innerText = carData.name;
+            document.getElementById("car-engine").innerText = `${carData.engine} سیلندر`;
+            document.getElementById("car-engine-size").innerText = `${carData.engine_size} لیتر`;
+            document.getElementById("car-gear").innerText = `${carData.gear} سرعته`;
+            document.getElementById("car-hp").innerText = carData.hp;
+            document.getElementById("car-torque").innerText = carData.torque;
+            document.getElementById("car-accelerate").innerText = carData.accelerate;
+            document.getElementById("car-top-speed").innerText = carData.top_speed;
+        } else {
+            console.error("خطا در بارگذاری داده‌ها");
+        }
+    };
+
+    // نمایش لودینگ
+    document.getElementById("loading").style.display = "block";
+
+    // ارسال درخواست
+    xhttp.open("GET", "car/" + carId);
+    xhttp.send();
+
     console.log(document.getElementById("img-bg").value);
     console.log(document.getElementById("iddata").value);
-    document.getElementById("cardetail_pic").src = document.getElementById("img-bg").value;
 }
 function hide(id) {
     $(id).style.display = "none";
+}
+
+function showOrder() {
+    $('orders2').style.display = "block";
+}
+function hideOrder() {
+    $('orders2').style.display = "none";
 }

@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('car_parts', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->unsignedBigInteger("car_types_id");
-            $table->foreign("car_types_id")->references('id')->on('car_types')->onDelete('cascade');
             $table->string("attribute");
             $table->integer("increasing_factor_hp");
             $table->integer("increasing_factor_torque");

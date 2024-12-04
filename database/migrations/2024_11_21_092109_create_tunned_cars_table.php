@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tunned_cars', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("cars_id");
-            $table->foreign("cars_id")->references('id')->on('cars')->onDelete('cascade');
+            $table->unsignedBigInteger("orders_id");
+            $table->foreign("orders_id")->references('id')->on('orders')->onDelete('cascade');
             $table->unsignedBigInteger("car_parts_id");
-            $table->foreign("car_parts_id")->references('id')->on('car_types')->onDelete('cascade');
+            $table->foreign("car_parts_id")->references('id')->on('car_parts')->onDelete('cascade');
             $table->timestamps();
         });
     }
